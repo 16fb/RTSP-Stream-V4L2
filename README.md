@@ -17,24 +17,24 @@ Manages Webcams on Linux.
 ### List Webcams 
 * `v4l2-ctl --list-devices`  
 Webcams will be listed as `/dev/video0`  
-![list_devices](\Images\list_devices.png)
+![list_devices](Images/list_devices.png)
 
 ### Preview Webcam
 * `ffplay /dev/video0`  
 Preview Webcam using `ffmpeg`  
-![ffplay_device](\Images\ffplay_device.png)
+![ffplay_device](Images/ffplay_device.png)
 
 ### View supported video formats
 * `v4l2-ctl --list-formats`  
 List video output format supported by webcam.  
 YUYV -> alternative to RGB, meant for transport.  
 MJPEG -> Compressed video format.  
-![list_formats](\Images\list_formats.png)
+![list_formats](Images/list_formats.png)
 
 ### View formats, resolution list, framerates supported
 * `v4l2-ctl --list-formats-ext`  
 Each webcam (and capture device) advertises a full list of resolution, formats, and frame rates that it supports.  
-![list_formats_ext](\Images\list_formats_ext.png)
+![list_formats_ext](Images/list_formats_ext.png)
 
 ### Query V4l2 device
 * `v4l2-ctl --device /dev/video0 --all`  
