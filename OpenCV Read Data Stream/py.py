@@ -3,8 +3,8 @@
 import cv2
 
 #cap = cv2.VideoCapture('rtsp://192.168.137.213:8554/unicast') # Rasp Pi RTSP Stream when on my HotSpot network
-cap = cv2.VideoCapture('rtsp://192.168.0.10:8554/unicast') # Rasp Pi RTSP Stream
-#cap = cv2.VideoCapture('https://192.168.137.213:8554/')    # Rasp Pi HTTPS Stream
+#cap = cv2.VideoCapture('rtsp://192.168.0.10:8554/unicast') # Rasp Pi RTSP Stream
+cap = cv2.VideoCapture('http://192.168.0.10:8554/')    # Rasp Pi HTTP Stream
 #cap = cv2.VideoCapture('rtsp://service:Aiot1483!@192.168.1.161') # AI Camera
 
 

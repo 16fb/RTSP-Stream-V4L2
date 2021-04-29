@@ -7,7 +7,8 @@
 [Good site for basic information](https://jpetazzo.github.io/2020/06/27/streaming-part-4-linux/)  
 [Link to solution repo](https://github.com/mpromonet/v4l2rtspserver)  
 [Guide to starting v4l2rtspserver](https://kevinsaye.wordpress.com/2018/10/17/making-a-rtsp-server-out-of-a-raspberry-pi-in-15-minutes-or-less/)  
-[Wiki on V4L2](https://en.wikipedia.org/wiki/Video4Linux)   
+[Wiki on V4L2](https://en.wikipedia.org/wiki/Video4Linux)  
+[some other site](https://sites.google.com/view/how2raspberrypi/streaming-video-with-vlc)
 
 ## V4l2
 Linux driver / API to handle + interface Webcams through system calls.  
@@ -81,7 +82,8 @@ I followed this guy's guide, we use Cmake to compile on rasp pi and run server.
 * apt update && apt install git cmake
 * git clone https://github.com/mpromonet/v4l2rtspserver.git
 * cd v4l2rtspserver && cmake . && make && make install
-* v4l2rtspserver /dev/video0 &
+* v4l2rtspserver /dev/video0 &  
+-> last line is to auto start on bootup.
 
 ## Commands [Running Server]
 ### Run RTSP Stream
@@ -92,5 +94,7 @@ In the folder where you ran Cmake
 * `v4l2rtspserver -W 1280 -H 720 -F 30 /dev/video0`  
 -> Other command parameters are in v4l2rtspserver Github [Here](https://github.com/mpromonet/v4l2rtspserver)  
 
+* `rtsp://192.168.0.10:8554/unicast`  
+-> Example url
 ### Viewing stream
 VLC player or Python script.
